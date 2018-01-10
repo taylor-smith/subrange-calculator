@@ -1,0 +1,21 @@
+{
+  "name": "subranges-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:server": "webpack --config webpack.server.config.js",
+    "buildw:server": "webpack -w --config webpack.server.config.js"
+  },
+  "author": "Taylor Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "@types/hapi": "^16.1.12",
+    "hapi": "^16.6.2"
+  }
+}
