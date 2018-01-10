@@ -2,7 +2,7 @@ import * as Hapi from 'hapi';
 
 const server = new Hapi.Server();
 
-server.connection({ port: 3000 });
+server.connection({ port: process.env.PORT || 5000});
 
 server.register([], (error: any) => {
     if (error) {
@@ -22,7 +22,7 @@ server.register([], (error: any) => {
             console.error(error);
             process.exit();
         } else {
-            console.log(`Started server at http:/localhost:3000`);
+            console.log(`Started server`);
         }
     });
 });

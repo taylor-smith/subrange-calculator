@@ -2,10 +2,14 @@
   "name": "subranges-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
+    "postinstall": "webpack --config webpack.server.config.js",
+    "start": "node private/server.js",
     "build:server": "webpack --config webpack.server.config.js",
     "buildw:server": "webpack -w --config webpack.server.config.js"
+  },
+  "engines": {
+    "node": "8.9.4"
   },
   "author": "Taylor Smith",
   "license": "MIT",
