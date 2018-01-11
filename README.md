@@ -6,5 +6,12 @@ Boilerplate and web app for finding subranges within a range as described in htt
 ### Server libraries
 * Hapi
 
+### Client libraries
+* React
+* React Router
+
 ### Build libraries
 * Webpack
+
+### TODO
+

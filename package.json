@@ -34,7 +34,9 @@
   },
   "dependencies": {
     "@types/hapi": "^16.1.12",
+    "@types/joi": "^13.0.4",
     "hapi": "^16.6.2",
+    "joi": "^13.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }

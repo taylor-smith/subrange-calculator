@@ -39,6 +39,6 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js']
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        // new webpack.HotModuleReplacementPlugin()
     ]
 };

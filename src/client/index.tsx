@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/app';
 
 ReactDOM.render(
-    <div>f you again except this time from inside a react component</div>,
+    <App />,
     document.getElementById('app')
 );

@@ -1,4 +1,5 @@
 import * as Hapi from 'hapi';
+import * as Joi from 'joi';
 import * as inert from 'inert';
 
 const server = new Hapi.Server();
@@ -25,6 +26,22 @@ server.register([
             reply.file(`private/${request.params.path}`);
         }
     });
+    
+    server.route({
+        method: 'POST',
+        path: '/api/submitFile',
+        config: {
+            validate: {
+                payload: {
+                    values: Joi.string()
+                }
+            }
+        },
+        handler(request: Hapi.Request, reply: Hapi.ReplyNoContinue) {
+            console.log(request.payload);
+            reply('lol');
+        }
+    })
 
     server.route({
         method: 'GET',
@@ -36,6 +53,7 @@ server.register([
             reply.file('./index.html');
         }
     });
+
 
     server.start((error: any) => {
         if (error) {
