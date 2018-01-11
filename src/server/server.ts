@@ -1,6 +1,7 @@
 import * as Hapi from 'hapi';
 import * as Joi from 'joi';
 import * as inert from 'inert';
+import { calculateSubranges } from './utils/calculateSubranges';
 
 const server = new Hapi.Server();
 
@@ -38,8 +39,11 @@ server.register([
             }
         },
         handler(request: Hapi.Request, reply: Hapi.ReplyNoContinue) {
-            console.log(request.payload);
-            reply('lol');
+            const arr = request.payload.values.split('\n');
+            const params = arr[0].split(" ").map((v: string) => +v);
+            const data = arr[1].split(" ").map((v: string) => +v);
+            const retVal = calculateSubranges(params, data);
+            reply({ retVal: retVal });
         }
     })
 
