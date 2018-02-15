@@ -35,7 +35,7 @@ server.register(
             path: '/api/submitFile',
             config: {
                 payload: {
-                    maxBytes: 999999999999999
+                    maxBytes: 10000000
                 },
                 validate: {
                     payload: {

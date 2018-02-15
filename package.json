@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "postinstall": "run-p build:*",
-    "start": "node private/server.js",
+    "start": "node --max-old-space-size=4096 private/server.js",
     "build:server": "webpack --config webpack.server.config.js",
     "buildw:server": "webpack -w --config webpack.server.config.js",
     "build:client": "webpack --config webpack.client.config.js",
